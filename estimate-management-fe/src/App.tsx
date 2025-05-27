@@ -9,6 +9,7 @@ import { EstimateProvider } from "./context/EstimateContext";
 import Home from "./pages/Home";
 import CreateEstimate from "./pages/CreateEstimate";
 import Navigation from "./components/Navigation";
+import { TestEstimate } from "./pages/TestEstimate";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <div className="container mx-auto px-4 flex-1 flex">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/test-estimate" element={<TestEstimate />} />
               <Route path="/estimate/:id" element={<CreateEstimate />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
